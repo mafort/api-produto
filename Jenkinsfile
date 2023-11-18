@@ -5,7 +5,7 @@ pipeline {
         stage ('Build Image') {
             steps {
                 script {
-                    dockerapp = docker.build("mafort/public/api-produto:${env.BUILD_ID}", '-f ./src/Dockerfile ./src') 
+                    dockerapp = docker.build("mafort/api-produto:${env.BUILD_ID}", '-f ./src/Dockerfile ./src') 
                 }                
             }
         }
